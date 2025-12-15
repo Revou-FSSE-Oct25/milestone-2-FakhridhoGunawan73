@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVOFUN</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        @font-face {
+            font-family: 'poppins';
+            src: url(assets/fonts/Poppins/Poppins-Regular.ttf);
+        }
+    </style>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --font-poppins: "Poppins", "sans-serif";
+            --color-primary:oklch(77.7% 0.152 181.912) ;
+            --color-secondary: ;
+            --color-third: ;
+            --color-dark:oklch(20.8% 0.042 265.755) ;
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-dark text-primary">
+    <!-- Header Start -->
+    <header class="sticky top-0 z-50 shadow-md">
+        <nav class="text-primary shadow-lg">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center py-3">
+                    <a href="#home" class="text-2xl font-bold">REVOFUN</a>
+
+                    <button id="menu-toggle"
+                        class="md:hidden focus:outline-none text-primary relative flex items-center justify-center p-2">
+                        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-6 absolute">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg id="icon-close" class="hidden absolute size-6" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+
+                    </button>
+
+                    <ul id="nav-desktop" class="hidden md:flex space-x-6 text-lg">
+                        <li><a href="#home" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#games" class="hover:text-white transition duration-300">Games</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden border-t ">
+                <a href="#home" class="block p-4 hover:bg-teal-800">Home</a>
+                <a href="#games" class="block p-4 hover:bg-teal-800">Games</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <!-- <section id="#" class="pt-20">
+        <div class="container mx-auto">
+            <div class="flex flex-warp">
+                <div class="w-full self-center px-4">
+                    <h2 class="text-5xl text-center">Welcome To Revofun Games</h2>
+                    <p class="text-base text-center ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, ipsum.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Hero Section End -->
+
+    <!-- Games Section Start -->
+    <!-- <section id="#" class="pt-20">
+        <div>
+            <div>
+                <div>
+                    <p>Number Guessing</p>
+                </div>
+                <div>
+                    <p>Rock Papper & Scisor</p>
+                </div>
+                <div>
+                    <p>Clicker</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Games Section End -->
+
+    <!-- Footer Start -->
+
+    <!-- Footer End -->
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
