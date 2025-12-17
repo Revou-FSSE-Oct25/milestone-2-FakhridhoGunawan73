@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        @font-face {
+            font-family: 'poppins';
+            src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
+    </style>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --font-poppins: "Poppins", "sans-serif";
+            --color-primary:oklch(77.7% 0.152 181.912) ;
+            --color-secondary:oklch(43.7% 0.078 188.216);
+            --color-dark:oklch(20.8% 0.042 265.755) ;
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-dark text-primary flex justify-center items-center h-screen">
+    <div class="text-center p-10 bg-secondary rounded-xl shadow-lg border border-teal-400">
+        <h1 class="text-3xl font-bold mb-4">Number Guessing Game</h1>
+        <p class="mb-2 text-left text-sm">Attempts : <span id="attempts-count">10</span></p>
+        <input id="input-number" type="number"
+            class="p-2 rounded text-dark mb-4 w-full text-center border focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+            placeholder="Input Number 1-100">
+        <button id="btn-cek"
+            class="font-semibold border p-2 rounded-3xl w-1/2 bg-dark hover:bg-primary hover:text-dark transition">
+            Cek angka
+        </button>
+        <p id="message" class="mt-4 text-lg font-semibold text-dark rounded-md"></p>
+        <p class="mt-4 text-left text-sm">Your Guess :</p>
+        <p id="history" class="border py-2 rounded-md min-h-[40px] bg-dark/20"></p>
+        <button id="btn-reset"
+            class="font-semibold border p-2 rounded-xl w-1/2 bg-dark hover:bg-primary hover:text-dark transition mt-4">New
+            Game</button>
+    </div>
+    <script src="../scripts/number-guessing.js"></script>
+</body>
+
+</html>
