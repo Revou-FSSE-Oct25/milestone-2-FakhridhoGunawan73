@@ -38,11 +38,13 @@ function cekNumber() {
         message.className = "mt-4 font-bold text-yellow-400";
         btnCek.disabled = true;
         isGameOver = true;
+        resetGame.classList.remove('hidden');
     } else if (attempts === 0) {
         message.textContent = `Game Over! Angka rahasianya adalah ${secretNumber}`;
         message.className = "mt-4 text-bold text-red-600"
         btnCek.disabled = true;
         isGameOver = true;
+        resetGame.classList.remove('hidden');
     } else if (userGuess > secretNumber) {
         message.textContent = "Too High, Try lower number again";
         message.className = "mt-4 text-bold text-red-400";
@@ -62,7 +64,7 @@ function newGame() {
     attempts = 10;
     attemptsDisplay.textContent = attempts;
     isGameOver = false;
-
+    resetGame.classList.add('hidden');
     message.textContent = "Game start again! Guess again...";
     message.className = "mt-4 font-bold text-white";
     historyDisplay.textContent = "";
