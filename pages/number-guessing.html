@@ -35,24 +35,42 @@
     </style>
 </head>
 
-<body class="font-poppins bg-dark text-primary flex justify-center items-center h-screen">
-    <div class="text-center p-10 bg-secondary rounded-xl shadow-lg border border-teal-400">
-        <h1 class="text-3xl font-bold mb-4">Number Guessing Game</h1>
-        <p class="mb-2 text-left text-sm">Attempts : <span id="attempts-count">10</span></p>
-        <input id="input-number" type="number"
-            class="p-2 rounded text-dark mb-4 w-full text-center border focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
-            placeholder="Input Number 1-100">
-        <button id="btn-cek" disabled
-            class="font-semibold border p-2 rounded-3xl w-1/2 bg-dark hover:bg-primary hover:text-dark transition disabled:opacity-30 disabled:cursor-not-allowed">
-            Cek angka
-        </button>
-        <p id="message" class="mt-4 text-lg font-semibold text-dark rounded-md"></p>
-        <p class="mt-4 text-left text-sm">Your Guess :</p>
-        <p id="history" class="border py-2 rounded-md min-h-[40px] bg-dark/20"></p>
-        <button id="btn-reset"
-            class="font-semibold border p-2 rounded-xl w-1/2 bg-dark hover:bg-primary hover:text-dark transition mt-4 hidden">New
-            Game</button>
+<body class="font-poppins bg-dark text-primary flex flex-col justify-center items-center min-h-screen">
+    <header class="mx-auto w-full">
+        <nav class="w-full bg-dark text-primary py-4 px-8 shadow-md flex justify-between items-center border-b">
+            <div class="text-2xl font-bold tracking-wider text-primary">REVOFUN</div>
+            <a href="../index.html"
+                class="bg-dark hover:bg-primary hover:text-dark px-6 py-2 rounded-full font-semibold transition-all border border-primary/50">
+                ← Back
+            </a>
+        </nav>
+    </header>
+    <div class="flex flex-grow items-center justify-center">
+        <div class="text-center p-10 bg-secondary rounded-xl shadow-lg border border-teal-400 ">
+            <h1 class="text-3xl font-bold mb-4">Number Guessing Game</h1>
+            <p class="mb-2 text-left text-sm">Attempts : <span id="attempts-count">10</span></p>
+            <input id="input-number" type="number"
+                class="p-2 rounded text-dark mb-4 w-full text-center border focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                placeholder="Input Number 1-100">
+            <button id="btn-cek" disabled
+                class="font-semibold border p-2 rounded-3xl w-1/2 bg-dark hover:bg-primary hover:text-dark transition disabled:opacity-30 disabled:cursor-not-allowed">
+                Cek angka
+            </button>
+            <p id="message" class="mt-4 text-lg font-semibold text-dark rounded-md"></p>
+            <p class="mt-4 text-left text-sm">Your Guess :</p>
+            <p id="history" class="border py-2 rounded-md min-h-[40px] bg-dark/20"></p>
+            <button id="btn-reset"
+                class="font-semibold border p-2 rounded-xl w-1/2 bg-dark hover:bg-primary hover:text-dark transition mt-4 hidden">New
+                Game</button>
+        </div>
     </div>
+
+    <footer class="w-full">
+        <div class="bg-secondary text-dark mt-auto p-5 ">
+            <p class="text-center">© 2025 RevoFun Gaming. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="../scripts/number-guessing.js"></script>
 </body>
 

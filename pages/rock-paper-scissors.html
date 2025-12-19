@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper & Scisor</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        @font-face {
+            font-family: 'poppins';
+            src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
+    </style>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --font-poppins: "Poppins", "sans-serif";
+            --color-primary:oklch(77.7% 0.152 181.912) ;
+            --color-secondary:oklch(43.7% 0.078 188.216);
+            --color-dark:oklch(20.8% 0.042 265.755) ;
+        }
+    </style>
+</head>
+
+<body class="font-poppins">
+    <header class="mx-auto w-full">
+        <nav class="w-full bg-secondary text-primary py-4 px-8 shadow-md flex justify-between items-center border-b">
+            <div class="text-2xl font-bold tracking-wider text-primary">REVOFUN</div>
+            <a href="../index.html"
+                class="bg-dark hover:bg-primary hover:text-dark px-6 py-2 rounded-full font-semibold transition-all border border-primary/50">
+                ← Back
+            </a>
+        </nav>
+    </header>
+    <div class="min-h-screen bg-dark text-primary flex flex-col items-center justify-center">
+        <div class="text-center p-10 bg-secondary rounded-xl shadow-lg border border-teal-400">
+            <h1 class="text-4xl mb-10 font-bold">Battle Arena</h1>
+            <div class="flex gap-10 items-center mb-12">
+                <div class="flex flex-col items-center text-center">
+                    <p class="text-slate-400 mb-2">You</p>
+                    <div id="player-choice"
+                        class="w-32 h-32 bg-primary rounded-2xl border-4 border-cyan-500 flex items-center justify-center text-5xl text-dark mb-4">
+                        ?</div>
+                    <div class="text-cyan-400 text-xl font-bold mt-2">Score : <span id="player-score">0</span></div>
+                </div>
+                <div class="text-4xl text-yellow-500">VS</div>
+                <div class="flex flex-col items-center text-center">
+                    <p class="text-slate-400 mb-2">Computer</p>
+                    <div id="computer-choice"
+                        class="w-32 h-32 bg-primary rounded-2xl border-4 border-cyan-500 flex items-center justify-center text-5xl text-dark mb-4">
+                        ?</div>
+                    <div class="text-cyan-400 text-xl font-bold mt-2">Score : <span id="computer-score">0</span></div>
+                </div>
+            </div>
+            <div id="result-text" class="text-2xl font-bold mb-10 h-8 text-white">Choose Your Weapon!</div>
+            <div class="flex gap-8">
+                <button data-choice="rock"
+                    class="choice-btn p-6 bg-slate-800 rounded-full hover:scale-110 hover:bg-slate-700 transition-all text-4xl">✊</button>
+                <button data-choice="paper"
+                    class="choice-btn p-6 bg-slate-800 rounded-full hover:scale-110 hover:bg-slate-700 transition-all text-4xl">✋</button>
+                <button data-choice="scissors"
+                    class="choice-btn p-6 bg-slate-800 rounded-full hover:scale-110 hover:bg-slate-700 transition-all text-4xl">✌️</button>
+            </div>
+            <div class="mt-10">
+                <button id="btn-new-game"
+                    class="hidden bg-primary text-dark font-bold rounded-full py-3 px-8 hover:bg-dark hover:text-primary transition-all shadow-lg animate-bounce">Play
+                    Again</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="">
+        <div class="container shadow-md bg-secondary text-dark p-5 box-border max-w-full">
+            <p class="text-center">© 2025 RevoFun Gaming. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/rock-paper-scissors.js"></script>
+</body>
+
+</html>
