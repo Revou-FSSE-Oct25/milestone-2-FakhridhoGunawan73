@@ -17,14 +17,21 @@ Revofun Games adalah sebuah portal game web interaktif yang menyuguhkan berbagai
 
 ---
 
----
-
 ## 🛠️ Technologies Used
 
 * **HTML5**: Sebagai kerangka utama struktur web.
 * **Tailwind CSS (v4)**: Digunakan untuk styling cepat, desain responsif, dan manajemen tema warna (Primary, Secondary, Dark).
 * **JavaScript (Vanilla)**: Menggerakkan seluruh logika permainan, mulai dari pengacakan angka, logika kemenangan RPS, hingga fungsi timer pada Clicker.
 * **Git & GitHub**: Digunakan untuk version control dan manajemen progress project.
+
+---
+
+## 🌐 Demo Website 
+
+| Deskripsi                                       | Link                                              |
+| ----------------------------------------------- | ------------------------------------------------- |
+| **Deployed Website** | https://revou-fsse-oct25.github.io/milestone-2-FakhridhoGunawan73/             |
+| **Source Code Repository**                      | https://github.com/FakhridhoGunawan73   
 
 ---
 
@@ -56,3 +63,4 @@ Revofun Games adalah sebuah portal game web interaktif yang menyuguhkan berbagai
 * **Developer**: Fakhridho Gunawan
 * **Year**: 2025
 * **Platform**: RevoFun Gaming Portal
+
