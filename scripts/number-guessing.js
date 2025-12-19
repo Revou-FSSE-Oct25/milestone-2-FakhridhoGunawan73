@@ -66,7 +66,7 @@ function newGame() {
     isGameOver = false;
     resetGame.classList.add('hidden');
     message.textContent = "Game start again! Guess again...";
-    message.className = "mt-4 font-bold text-white";
+    message.className = "mt-4 font-bold";
     historyDisplay.textContent = "";
     btnCek.disabled = true;
     inputNumber.value = '';
