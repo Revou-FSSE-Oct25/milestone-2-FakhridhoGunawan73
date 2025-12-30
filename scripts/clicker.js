@@ -6,19 +6,19 @@ const btnClick = document.getElementById('btn-click');
 const btnPlay = document.getElementById('btn-play');
 const btnReset = document.getElementById('btn-reset');
 const timerDisplay = document.getElementById('timer');
-const scoreDisplay = document.getElementById('score-display');
+const currentScoreDisplay = document.getElementById('current-score')
 const finalBoard = document.getElementById('final-board');
-const finalScore = document.getElementById('final-score');
+const finalScoreDisplay = document.getElementById('final-score-label');
 
 btnClick.addEventListener('click', () => {
     score++;
-    scoreDisplay.textContent = score;
+    currentScoreDisplay.textContent = score;
 });
 
 btnPlay.addEventListener('click', () => {
     score = 0;
     timeLeft = 10;
-    scoreDisplay.textContent = score;
+    currentScoreDisplay.textContent = score;
     timerDisplay.textContent = timeLeft + 's';
 
     btnPlay.disabled = true;
@@ -43,14 +43,14 @@ const endGame = () => {
     btnClick.disabled = true;
     btnReset.disabled = false;
 
-    finalScore.textContent = score;
+    finalScoreDisplay.textContent = score;
     finalBoard.classList.remove('hidden');
 }
 
 btnReset.addEventListener('click', () => {
     score = 0;
     timeLeft = 10;
-    scoreDisplay.textContent = '0';
+    currentScoreDisplay.textContent = '0';
     timerDisplay.textContent = '10s';
     finalBoard.classList.add('hidden');
     btnPlay.disabled = false;

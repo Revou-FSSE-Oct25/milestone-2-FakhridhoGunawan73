@@ -1,22 +1,25 @@
-let secretNumber = Math.floor(Math.random() * 100) + 1;
+const MAX_NUMBER = 100;
+const MAX_ATTEMPTS = 10;
+
+let secretNumber = Math.floor(Math.random() * MAX_NUMBER) + 1;
 let historyGuess = [];
 let attempts = 10;
 let isGameOver = false;
 
 const inputNumber = document.getElementById('input-number');
-const btnCek = document.getElementById('btn-cek');
+const btnCheck = document.getElementById('btn-check');
 const message = document.getElementById('message');
 const historyDisplay = document.getElementById('history');
 const resetGame = document.getElementById('btn-reset');
 const attemptsDisplay = document.getElementById('attempts-count');
 
-btnCek.disabled = true;
+btnCheck.disabled = true;
 
-function cekNumber() {
+function checkNumber() {
     const userGuess = Number(inputNumber.value);
 
-    if (!userGuess || userGuess < 1 || userGuess > 100) {
-        message.textContent = "Masukkan angka yang valid (1-100)!";
+    if (!userGuess || userGuess < 1 || userGuess > MAX_NUMBER) {
+        message.textContent = `Masukkan angka yang valid 1-${MAX_NUMBER}!`;
         return;
     }
 
@@ -36,13 +39,13 @@ function cekNumber() {
     if (userGuess === secretNumber) {
         message.textContent = "Correct!";
         message.className = "mt-4 font-bold text-yellow-400";
-        btnCek.disabled = true;
+        btnCheck.disabled = true;
         isGameOver = true;
         resetGame.classList.remove('hidden');
     } else if (attempts === 0) {
         message.textContent = `Game Over! Angka rahasianya adalah ${secretNumber}`;
         message.className = "mt-4 text-bold text-red-600"
-        btnCek.disabled = true;
+        btnCheck.disabled = true;
         isGameOver = true;
         resetGame.classList.remove('hidden');
     } else if (userGuess > secretNumber) {
@@ -54,31 +57,31 @@ function cekNumber() {
     }
 
     inputNumber.value = "";
-    btnCek.disabled = true;
+    btnCheck.disabled = true;
     inputNumber.focus();
 }
 
 function newGame() {
-    secretNumber = Math.floor(Math.random() * 100) + 1;
+    secretNumber = Math.floor(Math.random() * MAX_NUMBER) + 1;
     historyGuess = [];
-    attempts = 10;
+    attempts = MAX_ATTEMPTS;
     attemptsDisplay.textContent = attempts;
     isGameOver = false;
     resetGame.classList.add('hidden');
     message.textContent = "Game start again! Guess again...";
     message.className = "mt-4 font-bold";
     historyDisplay.textContent = "";
-    btnCek.disabled = true;
+    btnCheck.disabled = true;
     inputNumber.value = '';
 }
 
 inputNumber.addEventListener('input', function () {
     if (!isGameOver && inputNumber.value.trim() !== "") {
-        btnCek.disabled = false;
+        btnCheck.disabled = false;
     } else {
-        btnCek.disabled = true;
+        btnCheck.disabled = true;
     }
 });
 
-btnCek.addEventListener('click', cekNumber);
+btnCheck.addEventListener('click', checkNumber);
 resetGame.addEventListener('click', newGame);
