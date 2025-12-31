@@ -36,17 +36,36 @@
 
 </head>
 
-<body class="font-poppins">
-    <header class="mx-auto w-full">
-        <nav class="w-full bg-secondary text-primary py-4 px-8 shadow-md flex justify-between items-center border-b">
-            <div class="text-2xl font-bold tracking-wider text-primary">REVOFUN</div>
-            <a href="../index.html"
-                class="bg-dark hover:bg-primary hover:text-dark px-6 py-2 rounded-full font-semibold transition-all border border-primary/50">
-                ← Back
-            </a>
+<body class="font-poppins bg-dark text-primary min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 shadow-md bg-dark">
+        <nav class="text-primary shadow-lg border-b">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center py-3">
+                    <a href="#home" class="text-2xl font-bold">REVOFUN</a>
+                    <a href="../index.html"
+                        class="bg-dark hover:bg-primary hover:text-dark px-6 py-2 rounded-full font-semibold transition-all border border-primary/50">
+                        ← Back
+                    </a>
         </nav>
     </header>
-    <div class="border p-10 min-h-screen bg-dark text-primary flex items-center justify-center">
+    <div class="p-10 text-center">
+        <div class="border mx-auto bg-secondary text-dark rounded-2xl pt-5 pb-5">
+            <h1 class="mb-2 sm:text-2xl md:text-3xl lg:text-4xl font-bold">HOW TO PLAY?</h1>
+            <ol class="space-y-3">
+                <li><strong>Start the Game:</strong> Click the "Play Game" button to activate the clicker and start the
+                    countdown timer.</li>
+                <li><strong>Race Against Time:</strong> You have exactly 10 seconds to score as many points as possible.
+                </li>
+                <li><strong>Click Rapidly:</strong> Smash the "CLICK ME!" button as fast as your fingers can move before
+                    the time runs out.</li>
+                <li><strong>Final Result:</strong> Once the timer hits 0s, the button will lock, and your total score
+                    will be displayed on the final board.</li>
+                <li><strong>Challenge Yourself:</strong> Click "Reset" to clear your score and try to beat your personal
+                    best in the next round!</li>
+            </ol>
+        </div>
+    </div>
+    <div class="p-10 flex items-center justify-center">
         <div class="border p-10 bg-slate-800 rounded-2xl shadow-2xl w-full max-w-md text-center">
             <h1 class="text-3xl font-bold mb-6">Speed Clicker</h1>
             <div class="grid grid-cols-2 gap-4 mb-8">
@@ -78,7 +97,7 @@
         </div>
     </div>
 
-    <footer class="">
+    <footer class="mt-10">
         <div class="container shadow-md bg-secondary text-dark p-5 box-border max-w-full">
             <p class="text-center">© 2025 RevoFun Gaming. All rights reserved.</p>
         </div>

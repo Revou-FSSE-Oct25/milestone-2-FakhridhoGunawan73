@@ -35,17 +35,33 @@
     </style>
 </head>
 
-<body class="font-poppins bg-dark text-primary flex flex-col justify-center items-center min-h-screen">
-    <header class="mx-auto w-full">
-        <nav class="w-full bg-dark text-primary py-4 px-8 shadow-md flex justify-between items-center border-b">
-            <div class="text-2xl font-bold tracking-wider text-primary">REVOFUN</div>
-            <a href="../index.html"
-                class="bg-dark hover:bg-primary hover:text-dark px-6 py-2 rounded-full font-semibold transition-all border border-primary/50">
-                ← Back
-            </a>
+<body class="font-poppins bg-dark text-primary min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 shadow-md bg-dark">
+        <nav class="text-primary shadow-lg border-b">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center py-3">
+                    <a href="#home" class="text-2xl font-bold">REVOFUN</a>
+                    <a href="../index.html"
+                        class="bg-dark hover:bg-primary hover:text-dark px-6 py-2 rounded-full font-semibold transition-all border border-primary/50">
+                        ← Back
+                    </a>
         </nav>
     </header>
-    <div class="flex flex-grow items-center justify-center">
+    <div class="p-10 text-center">
+        <div class="border mx-auto bg-secondary text-dark rounded-2xl pt-5 pb-5">
+            <h1 class="mb-2 sm:text-2xl md:text-3xl lg:text-4xl font-bold ">HOW TO PLAY?</h1>
+            <ol class="space-y-3">
+                <li><strong>Enter Your Guess:</strong> Type a number from 1 to 100 in the input field.</li>
+                <li><strong>Get Feedback:</strong> After each guess, we will tell you if the secret number is higher or
+                    lower.</li>
+                <li><strong>Watch Your Attempts:</strong> You have a total of 10 lives. Every wrong guess costs you one
+                    attempt.</li>
+                <li><strong>Track History:</strong> Use the history log to keep track of your previous guesses.</li>
+                <li><strong>Victory:</strong> Guess the correct number before your attempts reach zero!</li>
+            </ol>
+        </div>
+    </div>
+    <div class="flex flex-grow items-center justify-center ">
         <div class="text-center p-10 bg-secondary rounded-xl shadow-lg border border-teal-400 ">
             <h1 class="text-3xl font-bold mb-4">Number Guessing Game</h1>
             <p class="mb-2 text-left text-sm">Attempts : <span id="attempts-count">10</span></p>
@@ -65,8 +81,8 @@
         </div>
     </div>
 
-    <footer class="w-full">
-        <div class="bg-secondary text-dark mt-auto p-5 ">
+    <footer class="mt-10">
+        <div class="container shadow-md bg-secondary text-dark p-5 box-border max-w-full">
             <p class="text-center">© 2025 RevoFun Gaming. All rights reserved.</p>
         </div>
     </footer>
